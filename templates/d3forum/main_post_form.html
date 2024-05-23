@@ -193,7 +193,7 @@
             <div class="col-sm-8">
                 <div class="mb-3 message_textarea_inserter">
                     <input type="button" class="btn btn-outline-primary btn-sm col-sm-2" name="quote" id="quote"
-                           onclick="d3forum_quote_message();" value="<{$smarty.const._MD_D3FORUM_BTN_QUOTE}>">
+                           onclick="appendQuote(); this.onclick=null;" value="<{$smarty.const._MD_D3FORUM_BTN_QUOTE}>">
                 </div>
             </div>
         </div>
@@ -335,7 +335,9 @@
 </form>
 <{* ----- Form Validation JavaScript  *}>
 <script type="text/javascript">
-    function d3forum_quote_message() {
-        document.getElementById("message").value = document.getElementById("message").value + document.getElementById("reference_quote").value ;
-    }
+function appendQuote() {
+    var textarea = document.getElementById("message");
+    var quotePost = document.getElementById("reference_quote").value;
+    CKEDITOR.instances['message'].setData(quotePost); /* raw code innerHTML or insertText */
+}
 </script>

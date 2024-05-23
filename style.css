@@ -1,9 +1,9 @@
 /*
- * Theme XCL Bootstrap 5 Starter
+ * Theme XCL Bootstrap v5.3.3 Starter
  *
- * @version   5.3.0
+ * @version   2.4.0
  * @author    Nuno Luciano ( https://github.com/gigamaster )
- * @copyright (c) 2023 The XOOPSCube Project, author
+ * @copyright (c) 2024 The XOOPSCube Project, author
  * @license   MIT license for Bootstrap
  * @license   BSD license for XOOPSCube XCL Theme
  * @link      https://github.com/xoopscube
@@ -14,8 +14,8 @@
 
     --bs-form-control-bg : var(--bs-light-bg-subtle)!important; /* Input background color override to enhance contrast */
 
-    --trackBG       : var(--bs-dark-rgb); /* hsl(228, 10%, 10%);*/
-    --thumbBG       : hsl(219, 15%, 25%); /*  hsl(229, 20%, 21%);  */
+    --trackBG       : var(--bs-dark-rgb);
+    --thumbBG       : hsl(219, 15%, 25%); 
     /* FIREFOX SCROLLBAR */
     scrollbar-color : var(--thumbBG) var( --trackBG ); /* thumb-color track-color */
     scrollbar-width : thin;
@@ -64,8 +64,7 @@ a:link {text-decoration: none;}
 
 /* REMOVE DROPDOWN FROM BLOCK TITLE AND NAV TOP */
 :is( .admin-action, .nav-link, .block-title) .dropdown-toggle::after {
-    display: none;
-    border:1px solid red;
+    display             : none;
 }
 
 /* CKEditor */
@@ -77,35 +76,37 @@ iframe[class^="cke"] html {
 /* NAVBAR TOGGLER
  * Reset the default SVG background image and specify your desired alternative in CSS !
  */
-
 .navbar-toggler-icon {
     /*background-image: none;*/
-    width: 1em;
-    height: 1em;
+    width               : 1em;
+    height              : 1em;
 }
-/*.navbar-toggler-icon::before {*/
-/*    font-family: FontAwesome;*/
-/*    content: "\f0c9"; !* fa-bars, fa-navicon *!*/
-/*}*/
 
 /* D3FORUM POST TREE */
 .post-tree-item {
-    list-syle :none;
+    list-style          : none;
 }
 /* D3FORUM ALERT PROGRESS TOASTER  */
-.progressTime::-webkit-progress-value { background-color: var(--bs-warning-bg-subtle);}
-.progressTime::-moz-progress-bar { background-color: var(--bs-warning-bg-subtle);}
-.progressTime {
-    accent-color:var(--bs-warning-bg-subtle);
-    border:1px solid var(--bs-warning-border-subtle);
-    width:348px;
-    height:4px;
-    position:relative;
-    bottom:-16px;
-    left:-12px;
+.progressTime::-webkit-progress-value { 
+    background          : var(--bs-warning-bg-subtle);
 }
-#progressInvisible { border:1px solid var(--bs-danger);}
-.btn-close {position: relative}
+.progressTime::-moz-progress-bar { 
+    background          : var(--bs-warning-bg-subtle);}
+.progressTime {
+    accent-color        : var(--bs-warning-bg-subtle);
+    border              : 1px solid var(--bs-warning-border-subtle);
+    width               : 348px;
+    height              : 4px;
+    position            : relative;
+    bottom              : -16px;
+    left                : -12px;
+}
+#progressInvisible { 
+    border              : 1px solid var(--bs-danger);
+}
+.btn-close {
+    position            : relative
+}
 
 /* -------------------- -------------------- XCL CUBE */
 .theme-options {
@@ -187,13 +188,9 @@ iframe[class^="cke"] html {
 }
 /* ---------- ---------- ------- SCROLL TOP */
 .scroll-top {
-    /*box-sizing: border-box;*/
-    position: absolute;
-    /*top: 12rem;*/
-    /*right: 2rem;*/
-    /*bottom: 0;*/
-    pointer-events: none;
-    z-index: 1000;
+    position        : absolute;
+    pointer-events  : none;
+    z-index         : 1000;
 }
 .scroll-top #ntop-bg {fill: var(--bs-secondary);}
 .scroll-top #ntop-arrow {fill: var(--bs-primary-bg-subtle);}
@@ -236,16 +233,14 @@ CSS properties available :
 color and background-color,
 text-decoration and text-shadow,
 stroke-color, fill-color and stroke-width */
-
 ::selection{
-    --bs-bg-opacity: 0.50;
-    --bs-text-opacity: 1;
-    color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
-    background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
+    --bs-bg-opacity     : 0.50;
+    --bs-text-opacity   : 1;
+    color               : rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+    background          : rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important;
 }
 
 /* -------------------- -------------------- SCROLLBAR */
-
 /* Note:
 scrollbar-width and scrollbar-color are part of CSS Working Group’s
 Scrollbars Module Level 1 draft and are currently only supported in Firefox
@@ -259,28 +254,28 @@ Scrollbars Module Level 1 draft and are currently only supported in Firefox
 }
 /* Draggable handle found at the bottom of some elements (like Textarea) */
 ::-webkit-resizer {
-    border-width        : 8px;
-    border-style        : solid;
+    border-width    : 8px;
+    border-style    : solid;
 }
 
 ::-webkit-resizer {
-    border-color        : transparent hsl(215, 15%, 25%) hsl(216, 17%, 17%) transparent;
+    border-color    : transparent hsl(215, 15%, 25%) hsl(216, 17%, 17%) transparent;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width               : 8px;  /* vertical scrollbar width */
-    height              : 8px; /* horizontal scrollbar height */
+    width           : 8px;  /* vertical scrollbar width */
+    height          : 8px; /* horizontal scrollbar height */
 }
 
 ::-webkit-scrollbar-button {
-    display             : none
+    display         : none
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background          : linear-gradient(145deg, hsl(216, 17%, 17%), hsl(211, 15%, 28%));
-    min-height          : 80px;
-    border-radius       : 0
+    background      : linear-gradient(145deg, hsl(216, 17%, 17%), hsl(211, 15%, 28%));
+    min-height      : 80px;
+    border-radius   : 0
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
@@ -288,14 +283,14 @@ Scrollbars Module Level 1 draft and are currently only supported in Firefox
 }
 /* Track */
 ::-webkit-scrollbar-track {
-    border              : 1px solid hsl(220, 15%, 25%);
-    border-radius       : var(--border-radius);
-    background          : linear-gradient(145deg, hsl(220, 15%, 15%), hsl(220, 21%, 15%));
-    /*box-shadow          : inset 2px 2px 4px 1px rgba(0, 0, 0, 0.4),*/
+    border          : 1px solid hsl(220, 15%, 25%);
+    border-radius   : var(--border-radius);
+    background      : linear-gradient(145deg, hsl(220, 15%, 15%), hsl(220, 21%, 15%));
+    /*box-shadow    : inset 2px 2px 4px 1px rgba(0, 0, 0, 0.4),*/
 }
 ::-webkit-scrollbar-thumb:horizontal{
     /*background: #000;*/
-    border-radius: 10px;
+    border-radius   : 10px;
 }
 /*  ::-webkit-scrollbar-track-piece
 the track not covered by the scrollbar-thumb or handle */

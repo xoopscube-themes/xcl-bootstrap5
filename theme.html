@@ -2,11 +2,11 @@
 <html class="no-js" lang="<{$xoops_langcode}>" data-bs-theme="light">
 <!--
 /*
- * Theme XCL Bootstrap 5 Starter
+ * Theme XCL Bootstrap v5.3.3 Starter
  *
- * @version   5.3.0
+ * @version   2.4.0
  * @author    Nuno Luciano ( https://github.com/gigamaster )
- * @copyright (c) 2023 The XOOPSCube Project, author
+ * @copyright (c) 2024 The XOOPSCube Project, author
  * @license   MIT license for Bootstrap
  * @license   BSD license for XOOPSCube XCL Theme
  * @link      https://github.com/xoopscube
@@ -22,7 +22,7 @@
     <{* ----- Custom Block-Left using prefix "navbar-" in block title ----- *}>
     <{include file="$xoops_theme/component/nav-theme-mode.html"}>
 
-    <{if $xoops_is_top}>
+    <{if isset($xoops_is_top)}>
     <{include file="$xoops_theme/component/hero.html"}>
     <{/if}>
 
@@ -70,19 +70,13 @@
     </a>
 </div>
 
-
-
-
-<{* ----- Bootstrap5
-    Remove Smarty comment to include Popper and Bootstrap JS separately
-<script src="<{$xoops_url}>/common/bootstrap5/popover.min.js"></script>
-<script src="<{$xoops_url}>/common/bootstrap5/bootstrap.min.js"></script>
------ *}>
-
 <{* ----- Bootstrap5 core JS bundle ----- *}>
-<script src="<{$xoops_url}>/common/bootstrap5/bootstrap.bundle.min.js"></script>
+<script src="<{$xoops_imageurl}>/js/bootstrap.bundle.min.js"></script>
 <{* ----- PrismJS ----- *}>
 <script defer src="<{$xoops_url}>/common/prismjs/prism.js"></script>
+<!-- Modules javascript -->
+<script defer><{$xoops_js|regex_replace:"/(\/\/\-\->|<!\-\-)/":""}></script>
+<!-- Theme script -->
 <{* ----- Theme JS ----- *}>
 <script src="<{$xoops_imageurl}>js/scripts.js"></script>
 
@@ -96,6 +90,5 @@
         console.log('All SVG icons inlined');
     });
 </script>
-
-    </body>
+</body>
 </html>

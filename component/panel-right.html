@@ -14,7 +14,7 @@
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasRightLabel">
             <{if $xoops_dirname}>
-            <img class="svg" src="<{$xoops_url}>/modules/<{$xoops_dirname}>/<{$module.icon}>" width="1em">
+            <img class="svg" src="<{$xoops_url}>/modules/<{$xoops_dirname}>/images/module_icon.svg" width="1em" height="1em" alt="icon">
             <{$xoops_dirname|ucfirst}>
              <{else}>
             <img class="svg" src="<{$xoops_url}>/images/icons/home.svg" width="1em">
@@ -30,8 +30,7 @@
             <{* ------- SWITCH THEME COLOR-MODE *}>
             <div class="mb-3 p-3 rounded" style="color: var(--bs-primary-text); background: var(--bs-dark-bg-subtle);">
                 <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="theme-select"/>
-                    <label class="form-check-label" for="theme-select">Theme Dark Mode</label>
+                    <label class="form-check-label" for="theme-select">Block-right Title prefix "panel-"</label>
                 </div>
             </div>
 

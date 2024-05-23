@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8" lang="<{$xoops_langcode}>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="color-scheme" content="light dark" />
     <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
     <meta name="description" content="<{$xoops_meta_description}>">
     <meta name="robots" content="<{$xoops_meta_robots}>">
@@ -17,13 +17,13 @@
     <!-- Facebook App -->
     <meta property="fb:app_id" content="<{$xoops_meta_fb_app}>">
     <!-- Open Graph data -->
-    <meta property="og:url" content="//<{$smarty.server.HTTP_HOST}><{$xoops_requesturi}>">
+    <meta property="og:url" content="<{$xoops_url}>"><meta property="og:url" content="//<{$smarty.server.HTTP_HOST}><{$xoops_requesturi}>">
     <meta property="og:type" content="website">
     <meta property="og:title" content="<{$xoops_pagetitle}>">
-    <{if $mytrustdirname == 'pico' && $content.ef.pico_img}>
+    <{if $xoops_dirname == 'pico' && isset($content.ef.pico_img)}>
     <meta property="og:image" content="<{$xoops_url}>/<{$mod_config.extra_images_dir}>/pico_img_0_<{$content.ef.pico_img|escape}>">
     <{else}>
-    <meta property="og:image" content="<{$theme_url}>img/tile.png">
+    <meta property="og:image" content="<{$xoops_url}>/images/tile.png">
     <{/if}>
     <meta property="og:description" content="<{$xoops_meta_description}>">
     <meta property="og:site_name" content="<{$xoops_sitename}>">
@@ -32,33 +32,33 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="<{$xoops_meta_twitter_site}>"><!-- @site_account -->
     <meta name="twitter:creator" content="@<{$xoops_meta_author}>">
-
-    <link rel="canonical" href="//<{$smarty.server.SERVER_NAME}><{$SCRIPT_NAME}>">
-
-    <!-- Favicon SVG located in the root directory -->
-    <link rel="icon" href="<{$xoops_url}>/favicon.svg" type="image/svg+xml">
-
-    <!-- Mobile App Manifest -->
-<!--    <link rel="manifest" href="<{$xoops_imageurl}>site.webmanifest">-->
-
+    <{* ----- Browserconfig and Webmanifest located in the root directory ----- *}>    
+    <meta name="msapplication-config" content="<{$xoops_url}>/browserconfig.xml">
+    <link rel="manifest" href="<{$xoops_url}>/site.webmanifest">
+    <{* ----- Favicons THEME COLOR ----- *}>
+    <meta name="theme-color" content="#181c25">
+    <meta name="msapplication-TileColor" content="#181c25">
+    <link rel="mask-icon" href="<{$xoops_url}>/images/favicon/safari-pinned-tab.svg" color="#181c25">
+    <{* ----- Favicon SVG - default /images/favicon ----- *}>
+    <link rel="icon" href="<{$favicon}>" type="image/svg+xml">
+    <{* ----- Favicons located in the root directory ----- *}>
+    <link rel="apple-touch-icon" sizes="180x180" href="<{$xoops_url}>/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<{$xoops_url}>/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<{$xoops_url}>/images/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="<{$xoops_url}>/images/favicon/favicon.ico">
+    <{* ----- Resquesturi $xoops_requesturi : /module/dirname/id ----- *}>
+    <link rel="canonical" href="<{$xoops_url}><{$SCRIPT_NAME}>">
     <!-- Bootstrap style - Local first -->
-    <link href="<{$xoops_url}>/common/bootstrap5/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap icons - Local first -->
-    <link href="<{$xoops_url}>/common/bootstrap5/bootstrap-icons.css" rel="stylesheet">
-
+    <link href="<{$xoops_imageurl}>css/bootstrap.min.css" rel="stylesheet">
     <!-- Theme default style.css -->
     <link rel="stylesheet" href="<{$xoops_themecss}>">
     <!-- Theme default module.css -->
     <link href="<{$xoops_imageurl}>css/module.css" rel="stylesheet">
-
+    <!-- Bootstrap icons - Local first -->
+    <link href="<{$xoops_imageurl}>css/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<{$xoops_url}>/common/prismjs/prism.css">
-    <!-- Modules javascript -->
-<!--    <script defer><{$xoops_js|regex_replace:"/(\/\/\-\->|<!\-\-)/":""}></script>-->
     <!-- RMV: added module header -->
-    <{if $xoops_isuser}>
     <{$module_header}>
-    <{/if}>
     <!-- RMV: added block header -->
-    <{* $xoops_block_header *}>
-
+    <{$xoops_block_header}>
 </head>

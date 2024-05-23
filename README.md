@@ -11,11 +11,11 @@
 
 THEME | xcl-bootstrap5
 ------------ | -------------
-Description | Theme built with Bootstrap 5 for XCL 2.3.x
+Description | Theme built with Bootstrap 5.3.3 for XCL 2.4.0
 Render Engine | Smarty v2 and Smarty v3
-Version | 2.3.1
+Version | 2.4.0
 Author | @gigamaster Nuno Luciano (XCL23)
-Copyright | 2011-2022 Authors
+Copyright | 2011-2024 Authors
 License | CC
 
 
@@ -23,9 +23,9 @@ License | CC
 
 
 
-          Apache, Nginx, etc. PHP 7.2.x
-          MySQL 5.6, MariaDB  InnoDB utf8 / utf8mb4
-          XCL version >= 2.3.1
+          Apache, Nginx, etc. PHP 8.x.x
+          MySQL 5.7.x, MariaDB  InnoDB utf8 / utf8mb4
+          XCL version > 2.3.3
 
 
 
@@ -34,7 +34,7 @@ License | CC
 
 ## Overview   
 
-🚧🛠 XCL THEME Bootstrap5 for XCL 2.3.1.
+🚧🛠 XCL THEME Bootstrap5 for XCL 2.4.0
 
 Render Engine - Smarty is a template engine for PHP, facilitating the separation of presentation (HTML/CSS) from application logic.  
 This implies that PHP code is application logic, and is separated from the presentation, making it easier to customize theme and templates.

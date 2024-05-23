@@ -1,14 +1,25 @@
 # Change Log
 
-## XCL Theme Bootstrap 5.3 Starter
+## XCL Theme Bootstrap v5.3.3 Starter
 
-#### XCL Version 2.3.x
+#### XCL Version 2.4.0
 
 All notable changes to XCL Theme Bootstrap 5.3 Starter will be documented in this file.
 
 ### The XOOPSCube Project
 
 Git Repository : Refer please to [Branch Legacy ](https://github.com/xoopscube-themes/xcl-bootstrap5)
+
+   
+## [240rc] 2024-04-20
+
+- Update to Bootstrap v5.3.3
+- Update to Bootstrap Icons v1.11.3
+- Fix CKEditor source code view
+- Fix Admin Panel Right
+- Feature favicons, web manifest
+- Local first
+- Framework in theme folder 
 
 ## [231rc] 2023-03-23  
 

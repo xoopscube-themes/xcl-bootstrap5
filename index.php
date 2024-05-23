@@ -1,10 +1,10 @@
 ﻿<?php
 /*
- * Theme XCL Bootstrap 5 Starter
+ * Theme XCL Bootstrap v5.3.3 Starter
  *
- * @version   5.3.0
+ * @version   2.4.0
  * @author    Nuno Luciano ( https://github.com/gigamaster )
- * @copyright (c) 2023 The XOOPSCube Project, author
+ * @copyright (c) 2024 The XOOPSCube Project, author
  * @license   MIT license for Bootstrap
  * @license   BSD license for XOOPSCube XCL Theme
  * @link      https://github.com/xoopscube
