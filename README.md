@@ -5,7 +5,7 @@
 
 ## ///// — XCL BOOTSTRAP5
 
-![XCL Theme Bootstrap5](https://raw.githubusercontent.com/xoopscube-themes/xcl-neumorphic/0c590d76cf1e69b704316bef80e3e8704305a008/xcl-neumorphic%2B114.PNG)
+![XCL Theme Bootstrap5](/screenshot.png)
 
 ---
 
